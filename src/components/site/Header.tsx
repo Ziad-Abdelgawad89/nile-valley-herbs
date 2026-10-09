@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import logo from "@/assets/logo-official.png.asset.json";
+import logo from "@/assets/logo-trim.webp";
 
 export const nav = [
   { to: "/", label: "Home" },
@@ -17,7 +17,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b bg-card/95 backdrop-blur">
       <div className="container-site flex h-20 items-center justify-between gap-6">
         <Link to="/" className="shrink-0" aria-label="Nile Valley Herbs Export — Home">
-          <img src={logo.url} alt="Nile Valley Herbs Export logo" width={500} height={500} className="h-16 w-auto" />
+        <img src={logo}alt="Nile Valley Herbs Export logo"className="h-16 w-auto object-contain"/>
         </Link>
         <nav aria-label="Main" className="ml-auto hidden lg:block">
           <ul className="flex items-center gap-7 text-sm font-medium">

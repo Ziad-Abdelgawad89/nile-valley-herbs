@@ -5,6 +5,10 @@ import sorting from "@/assets/sorting.jpg";
 import exportImg from "@/assets/export.jpg";
 import { seo } from "@/lib/products";
 import { ExportProcess, ProductGrid, SectionHead, icons } from "@/components/site/Sections";
+import categoryHerbs from "@/assets/category-herbs.webp";
+import categorySpices from "@/assets/category-spices.webp";
+import categorySeeds from "@/assets/category-seeds.webp";
+import categoryAllProducts from "@/assets/category-all-products.webp";
 
 export const Route = createFileRoute("/")({
   head: () =>
@@ -101,7 +105,7 @@ function Home() {
             >
               <div className="aspect-[4/5] overflow-hidden">
                 <img
-                  src={harvest}
+                  src={categoryHerbs}
                   alt="Egyptian herbs for export"
                   width={800}
                   height={1000}
@@ -130,7 +134,7 @@ function Home() {
             >
               <div className="aspect-[4/5] overflow-hidden">
                 <img
-                  src={sorting}
+                  src={categorySpices}
                   alt="Egyptian spices prepared for export"
                   width={800}
                   height={1000}
@@ -159,7 +163,7 @@ function Home() {
             >
               <div className="aspect-[4/5] overflow-hidden">
                 <img
-                  src={exportImg}
+                  src={categorySeeds}
                   alt="Egyptian seeds prepared for export"
                   width={800}
                   height={1000}
@@ -187,7 +191,7 @@ function Home() {
             >
               <div className="aspect-[4/5] overflow-hidden">
                 <img
-                  src={hero}
+                  src={categoryAllProducts}
                   alt="Nile Valley Egyptian agricultural products"
                   width={800}
                   height={1000}

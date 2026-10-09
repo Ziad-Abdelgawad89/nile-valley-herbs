@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { getProduct, products, seo } from "@/lib/products";
 import { icons } from "@/components/site/Sections";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const Route = createFileRoute("/products/$slug")({
   loader: ({ params }) => {
@@ -54,10 +55,13 @@ function ProductPage() {
               <div className="grid gap-2 py-5 sm:grid-cols-3"><dt className="font-semibold">Packaging</dt><dd className="sm:col-span-2 text-muted-foreground">Export packing such as paper bags, polypropylene bags or cartons, with weights and labelling arranged per buyer request.</dd></div>
             </dl>
 
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <Link to="/contact" hash="quote" search={{ product: p.name }} className="btn btn-primary">Request a Quote</Link>
-              <Link to="/products" className="btn btn-outline">All Products</Link>
-            </div>
+              <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <Link to="/contact" hash="quote" search={{ product: p.name }} className="btn btn-primary">
+              Request a Quote
+            </Link>
+            <Link to="/products" className="btn btn-outline">All Products</Link>
+            <WhatsAppButton productName={p.name} />
+          </div>
             <p className="mt-6 flex items-center gap-3 text-sm text-muted-foreground"><span className="text-primary">{icons.chat}</span>Questions about this product? Email <a className="text-primary underline" href="mailto:ziad@nilevalleyherbs-eg.com">ziad@nilevalleyherbs-eg.com</a></p>
           </div>
         </div>

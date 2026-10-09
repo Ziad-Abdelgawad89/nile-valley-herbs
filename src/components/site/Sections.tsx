@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { products, type ProductCategory } from "@/lib/products";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export function PageHero({
   eyebrow,
@@ -118,13 +119,16 @@ export function ProductGrid({
                 {p.short}
               </p>
 
+             <div className="mt-5 flex w-full items-center justify-between gap-2">
               <Link
                 to="/products/$slug"
                 params={{ slug: p.slug }}
-                className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-all hover:gap-3"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-all hover:gap-3"
               >
-                View Product <span aria-hidden>→</span>
+                View Product <span aria-hidden="true">→</span>
               </Link>
+              <WhatsAppButton productName={p.name} iconOnly />
+            </div>
             </div>
           </li>
         ))}
@@ -319,6 +323,7 @@ export function CtaBand() {
         >
           Request a Quote
         </Link>
+        
       </div>
     </section>
   );

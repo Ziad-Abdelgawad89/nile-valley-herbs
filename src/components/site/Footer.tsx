@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { nav } from "./Header";
 import { FacebookIcon, WhatsAppIcon } from "./BrandIcons";
-import logo from "@/assets/logo-official.png.asset.json";
+import logo from "@/assets/logo-trim.webp";
 
 const heading = "eyebrow !text-forest-foreground/60";
 const list = "mt-4 text-sm";
@@ -38,8 +38,8 @@ export function Footer() {
 
         <div className="grid gap-10 py-11 md:grid-cols-2 lg:grid-cols-[minmax(0,1.3fr)_auto_minmax(356px,1.5fr)_auto] lg:gap-12">
           <div className="flex min-w-0 items-start gap-4">
-            <Link to="/" aria-label="Nile Valley Herbs Export — Home" className="shrink-0 rounded-sm bg-card p-1.5">
-              <img src={logo.url} alt="Nile Valley Herbs Export logo" width={500} height={500} loading="lazy" className="h-[4.5rem] w-auto" />
+            <Link to="/" aria-label="Nile Valley Herbs Export — Home" className="shrink-0 rounded-sm bg-card p-1.5">    
+          <img src={logo}alt="Nile Valley Herbs Export logo"loading="lazy"className="h-[4.5rem] w-auto object-contain"/>
             </Link>
             <p className="max-w-xs text-sm leading-relaxed opacity-80">
               Sourcing and exporting premium Egyptian herbs and seeds for importers, wholesalers and food and herbal businesses worldwide.
