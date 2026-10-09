@@ -17,8 +17,9 @@ export function QuoteForm({ defaultProduct = "" }: { defaultProduct?: string }) 
       await send({ data: fd as never });
       setState("done");
       form.reset();
-    } catch (x) {
-      setErr("Please check the required fields, or email us at info@nilevalleyherbs-eg.com.");
+   } catch (x) {
+      console.error("Quote submission failed:", x);
+      setErr(x instanceof Error ? x.message : "Quote submission failed. Please try again.");
       setState("error");
     }
   }
